@@ -11,10 +11,6 @@ class PoseEstimator():
         self.model_path = model_path
         self.running_mode = running_mode
 
-        # self._BaseOptions = mp.tasks.BaseOptions
-        # self._PoseLandmarker = mp.tasks.vision.PoseLandmarker
-        # self._PoseLandmarkerOptions = mp.tasks.vision.PoseLandmarkerOptions
-
         self._options = vision.PoseLandmarkerOptions(
            base_options = python.BaseOptions(model_asset_path = self.model_path),
            running_mode = self.running_mode,
